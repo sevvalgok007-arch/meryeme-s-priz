@@ -1,0 +1,497 @@
+
+/* GENEL AYARLAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #100D0F;
+    color: #F5EEEE;
+    font-family: Georgia, serif;
+}
+
+/* MENÜ */
+
+header {
+    width: 100%;
+    padding: 25px 8%;
+    background-color: #171114;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #B34B64;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul a {
+    color: #E5D6D9;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover {
+    color: #BD6277;
+}
+
+/* ANA SAYFA */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+    radial-gradient(circle, #48202E 0%, #100D0F 65%);
+}
+
+.small-title {
+    color: #C77B8C;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 80px);
+    letter-spacing: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: #B96A7D;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 500px;
+    line-height: 1.8;
+    color: #D0C0C4;
+    margin-bottom: 35px;
+}
+
+.surprise-button {
+    background-color: #762E43;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.surprise-button:hover {
+    background-color: #A84B65;
+    transform: translateY(-4px);
+}
+
+/* İÇERİK BÖLÜMLERİ */
+
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 300px;
+}
+
+.content-section h2 {
+    color: #B96A7D;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    color: #D0C0C4;
+    line-height: 1.8;
+}
+
+/* ALT BİLGİ */
+
+footer {
+    background-color: #171114;
+    text-align: center;
+    padding: 25px;
+    color: #C77B8C;
+}
+
+/* TELEFON UYUMLULUĞU */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        letter-spacing: 6px;
+    }
+
+}
+
+/* MERYEM DOSYASI KARTLARI */
+
+.info-card {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 35px;
+
+    background-color: #1D1519;
+    border: 1px solid #71394A;
+    border-radius: 12px;
+
+    text-align: left;
+    line-height: 2;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: #B96A7D;
+}
+
+.info-card h3 {
+    color: #C77B8C;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #D0C0C4;
+}
+
+/* =================================
+   ANILAR SAYFASI
+================================= */
+
+
+/* FOTOĞRAF GALERİSİ */
+
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+
+/* FOTOĞRAF KARTLARI */
+
+.memory-card {
+    background-color: #21171B;
+
+    border: 1px solid #59323F;
+    border-radius: 12px;
+
+    overflow: hidden;
+    text-align: left;
+
+    transition: 0.4s;
+}
+
+
+/* KART HAREKETİ */
+
+.memory-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #B96A7D;
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+
+/* FOTOĞRAFLAR */
+
+.memory-card img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+    display: block;
+
+    transition: 0.4s;
+}
+
+.memory-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* FOTOĞRAF AÇIKLAMALARI */
+
+.memory-info {
+    padding: 25px;
+}
+
+.memory-info h3 {
+    color: #C77B8C;
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+}
+
+.memory-info p {
+    color: #C8B7BC;
+
+    line-height: 1.7;
+}
+
+
+/* ANILAR MESAJI */
+
+.memory-message {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        180deg,
+        #100D0F,
+        #301923
+    );
+}
+
+.memory-message h2 {
+    color: #C77B8C;
+
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.memory-message p {
+    max-width: 650px;
+
+    margin: 15px auto;
+
+    color: #D0C0C4;
+
+    line-height: 1.9;
+}
+
+
+/* TABLET UYUMLULUĞU */
+
+@media (max-width: 950px) {
+
+    .memory-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* TELEFON UYUMLULUĞU */
+
+@media (max-width: 550px) {
+
+    .memory-gallery {
+        grid-template-columns: 1fr;
+
+        max-width: 450px;
+    }
+
+    .memory-card img {
+        height: 320px;
+    }
+
+    .memory-message h2 {
+        font-size: 24px;
+    }
+
+}
+
+/* MEKTUP SAYFASI */
+
+.letter-hero {
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+.letter-hero h1 {
+    color: #C77B8C;
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.letter-hero p {
+    color: #C8B7BC;
+    line-height: 1.8;
+}
+
+.letter-section {
+    min-height: 550px;
+    padding: 50px 20px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.envelope-container {
+    cursor: pointer;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.envelope-container:hover {
+    transform: translateY(-8px);
+}
+
+.envelope {
+    width: 280px;
+    height: 180px;
+    position: relative;
+    margin: auto;
+}
+
+.envelope-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #702D42;
+    border: 2px solid #B96A7D;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #A34D65;
+    z-index: 3;
+    transform-origin: top;
+    transition: transform 0.6s;
+}
+
+.envelope-heart {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    color: #F4D5DC;
+    font-size: 35px;
+    z-index: 4;
+}
+
+.envelope-hint {
+    color: #C77B8C;
+    margin-top: 25px;
+}
+
+.envelope-container.opened .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.letter-paper {
+    display: none;
+    max-width: 650px;
+    width: 90%;
+    background: #F0E4DC;
+    color: #39252B;
+    padding: 45px;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    line-height: 1.9;
+}
+
+.letter-paper.show {
+    display: block;
+    animation: letterAppear 0.8s ease;
+}
+
+.letter-paper h2 {
+    color: #702D42;
+    margin-bottom: 25px;
+}
+
+.letter-paper p {
+    margin-bottom: 18px;
+}
+
+.letter-ending {
+    font-weight: bold;
+    color: #702D42;
+}
+
+.letter-signature {
+    text-align: right;
+    font-style: italic;
+}
+
+.letter-close {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 25px;
+    background: #702D42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.letter-close:hover {
+    background: #963E58;
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 550px) {
+    .letter-hero h1 {
+        font-size: 30px;
+    }
+
+    .letter-paper {
+        padding: 25px;
+    }
+
+    .envelope {
+        transform: scale(0.85);
+    }
+}
